@@ -17,6 +17,15 @@
       <div class="logo">
         <img src="images/logo-avio.png" alt="Avio Tech Solutions logo" />
       </div>
+
+      <!-- Mobile nav toggle (hamburger) -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
       <nav class="main-nav">
         <a href="#home" class="nav-link active">Home</a>
         <a href="#services" class="nav-link">Services</a>
@@ -27,21 +36,17 @@
   </header>
 
   <main>
-    <!-- HERO -->
+    <!-- HERO (exact wording) -->
     <section id="home" class="hero">
       <div class="hero-bg"></div>
       <div class="hero-overlay"></div>
       <div class="hero-content container">
         <h1>Upgrade Your Living Space with Avio Tech Solutions</h1>
-        <p>
-          Professional home theater, TV mounting, smart home, and computer installation
-          services in Venice, Florida and the surrounding area.
-        </p>
         <a href="#contact" class="btn btn-primary hero-btn">Contact Us</a>
       </div>
     </section>
 
-    <!-- WELCOME SECTION (image left, text right) -->
+    <!-- WELCOME SECTION -->
     <section id="about" class="section section-welcome">
       <div class="container welcome-inner">
         <div class="welcome-image">
@@ -71,67 +76,44 @@
       </div>
     </section>
 
-    <!-- TESTIMONIAL -->
-    <section class="section section-testimonial">
-      <div class="container testimonial-inner">
-        <div class="testimonial-image">
-          <img src="images/testimonial.jpg" alt="Home theater installation" />
-        </div>
-        <div class="testimonial-content">
-          <blockquote>
-            “This is your Testimonial quote. Use this space to share reviews about you,
-            your services or your business.”
-          </blockquote>
-          <p class="testimonial-name">Jason L.</p>
-          <p class="testimonial-role">Customer Support</p>
-        </div>
-      </div>
-    </section>
-
     <!-- SERVICES SECTION -->
     <section id="services" class="section section-services">
       <div class="container">
         <h2>Our Services</h2>
         <div class="service-grid">
-          
-          <!-- Home Theater -->
+
           <article class="service-card">
             <img src="images/service-home-theater.jpg" class="service-image" alt="Home Theater Installation" />
             <div class="service-body">
               <h3>Home Theater Installation</h3>
               <p>
-                Transform your home entertainment experience with our professional Home Theater
-                installation service. Our team of expert technicians will create a custom installation
-                to fit your unique space and needs. With top-of-the-line equipment, your movies, shows,
-                and games have never looked or sounded better.
+                Transform your home entertainment experience with our professional Home Theater installation service.
+                Our team of expert technicians will create a custom installation to fit your unique space and needs.
+                With top-of-the-line equipment, your movies, shows, and games have never looked or sounded better.
               </p>
             </div>
           </article>
 
-          <!-- Computer Installation -->
           <article class="service-card">
             <img src="images/service-computer.jpg" class="service-image" alt="Computer Installation" />
             <div class="service-body">
               <h3>Computer Installation</h3>
               <p>
-                When it comes to computer installation and repair, our team of expert technicians is
-                here to provide the fastest, most reliable, and affordable service possible. We know
-                downtime can be a major setback, so we work quickly and efficiently to get your systems
-                back up and running.
+                When it comes to computer installation and repair, our team of expert technicians is here to provide
+                the fastest, most reliable, and affordable service possible. We know downtime can be a major setback,
+                so we work quickly and efficiently to get your systems back up and running.
               </p>
             </div>
           </article>
 
-          <!-- Smart Home -->
           <article class="service-card">
             <img src="images/service-smart-home.jpg" class="service-image" alt="Smart Home Installation" />
             <div class="service-body">
               <h3>Smart Home Installation</h3>
               <p>
-                Our Smart Home installation service is designed to bring you the latest in smart home
-                technology in an easy and intuitive way. We integrate your devices with a hassle-free
-                process and provide technology that fits your lifestyle, so you can elevate your
-                living experience.
+                Our Smart Home installation service is designed to bring you the latest in smart home technology in an
+                easy and intuitive way. We integrate your devices with a hassle-free process and provide technology
+                that fits your lifestyle, so you can elevate your living experience.
               </p>
             </div>
           </article>
@@ -140,7 +122,7 @@
       </div>
     </section>
 
-    <!-- BLACK CONSULTATION BAR (ONLY ONE, AFTER SERVICES) -->
+    <!-- BLACK CONSULTATION BAR -->
     <section class="consult-bar">
       <div class="consult-inner">
         <p class="consult-text">Call for your Free Consultation</p>
@@ -154,7 +136,7 @@
         <div class="contact-info">
           <h2>Contact Us</h2>
           <p><strong>Phone:</strong> <a href="tel:19412180418">941-218-0418</a></p>
-          <p><strong>E-Mail:</strong> <a href="mailto:info@aviotechsolutions.com">info@aviotechsolutions.com</a></p>
+          <p><strong>Email:</strong> <a href="mailto:info@aviotechsolutions.com">info@aviotechsolutions.com</a></p>
         </div>
 
         <div class="contact-form">
@@ -164,7 +146,7 @@
             <label>Last name<input type="text" required /></label>
             <label>Email*<input type="email" required /></label>
             <label>Message*<textarea rows="4" required></textarea></label>
-            <button type="submit" class="btn btn-primary btn-full">Submit (demo)</button>
+            <button class="btn btn-primary btn-full">Submit (demo)</button>
           </form>
         </div>
       </div>
