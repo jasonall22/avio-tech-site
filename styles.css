@@ -90,7 +90,7 @@ a {
   border-radius: 999px;
 }
 
-/* HERO (exact look) */
+/* HERO */
 
 .hero {
   height: 70vh;
@@ -129,7 +129,7 @@ a {
   font-weight: 300;
   line-height: 1.15;
   letter-spacing: 0.5px;
-  margin-bottom: 1.8rem; /* extra space to button since no sub-text */
+  margin-bottom: 1.8rem;
 }
 
 /* Buttons */
@@ -229,67 +229,145 @@ a {
 
 .consult-bar {
   background: #000;
-  padding: 2.5rem 1rem;
+  padding: 1.5rem 1rem;
   color: #fff;
+  margin-top: 1rem;
+}
+
+.consult-inner {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .consult-text {
-  font-size: 1.6rem;
-  font-weight: 300;
+  font-size: 1.35rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin: 0;
+  line-height: 1.4;
 }
 
 .consult-phone {
-  font-size: 1.9rem;
-  font-weight: 400;
-  margin-top: .3rem;
+  font-size: 1.55rem;
+  font-weight: 500;
+  margin: 0.25rem 0 0;
+  line-height: 1.4;
 }
 
-/* CONTACT */
+/* CONTACT SECTION – Wix-style */
 
 .section-contact {
-  background: #f7f7f7;
+  padding: 3rem 0 2rem;
 }
 
-.contact-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.contact-flex {
+  display: flex;
   gap: 2rem;
+  align-items: stretch;
 }
 
-.contact-form {
-  background: #fff;
-  border: 1px solid #e5e5e5;
-  border-radius: 1.25rem;
-  padding: 1.5rem;
-}
-
-.contact-form form {
+/* Left maroon panel */
+.contact-left {
+  background: #630809;           /* sampled deep red */
+  color: #fff;
+  flex: 1;
+  border-radius: 30px;
+  padding: 5rem 2rem 3rem;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  gap: .75rem;
+  justify-content: center;
 }
 
-.contact-form label {
+.contact-left h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.contact-email,
+.contact-phone {
+  font-size: 1.1rem;
+  margin: .5rem 0;
+}
+
+.contact-icons {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.contact-icons img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+}
+
+/* Right light-gray panel */
+
+.contact-right {
+  background: #E4EAF0;
+  flex: 1;
+  padding: 2.5rem;
+  border-radius: 30px;
+  text-align: left;
+}
+
+.contact-right h3 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-right form {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
-  font-size: 0.9rem;
+  gap: 1rem;
 }
 
-.contact-form input,
-.contact-form textarea {
-  border-radius: .75rem;
-  border: 1px solid #ccc;
-  padding: .45rem .6rem;
+.contact-right label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+
+.contact-right input,
+.contact-right textarea {
+  border-radius: 12px;
+  border: 1px solid #c7c7c7;
+  padding: .6rem;
+  font-size: 1rem;
+}
+
+/* Blue submit button */
+
+.btn-submit {
+  margin-top: 1rem;
+  padding: .9rem;
+  background: #1A73E8;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-submit:hover {
+  background: #125ec9;
 }
 
 /* FOOTER */
 
 .site-footer {
   text-align: center;
-  padding: 1.25rem 0;
+  padding: 1.25rem 0 1.5rem;
   border-top: 1px solid #e5e5e5;
   color: #777;
+  margin-top: 0;
 }
 
 /* RESPONSIVE */
@@ -312,8 +390,18 @@ a {
   }
 
   .welcome-inner,
-  .contact-inner {
-    grid-template-columns: 1fr;
+  .contact-flex {
+    flex-direction: column;
+  }
+
+  .welcome-inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-left,
+  .contact-right {
+    border-radius: 30px;
   }
 
   .hero {
