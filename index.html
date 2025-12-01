@@ -27,7 +27,7 @@
   </header>
 
   <main>
-    <!-- HERO (big image with centered text + button) -->
+    <!-- HERO -->
     <section id="home" class="hero">
       <div class="hero-bg"></div>
       <div class="hero-overlay"></div>
@@ -41,32 +41,37 @@
       </div>
     </section>
 
-    <!-- WELCOME SECTION -->
+    <!-- WELCOME SECTION (image left, text right) -->
     <section id="about" class="section section-welcome">
-      <div class="container">
-        <h2>Welcome to Avio Tech Solutions</h2>
-        <p>
-          Avio Tech Solutions is your go-to destination in Venice, Florida for professional home theater
-          and computer installation services. Our goal is to enhance your entertainment experience by
-          providing top-notch services at affordable prices, with client satisfaction being our utmost priority.
-        </p>
-        <p>
-          At Avio Tech Solutions, we understand the importance of having a seamless and enjoyable home theater
-          setup. Whether you're a movie buff, a gaming enthusiast, or simply looking to create a relaxing
-          entertainment space in your home, our team of experts is here to help. We offer a range of services
-          including home theater system design, installation, setup, and troubleshooting to ensure that your
-          audio and visual needs are met to perfection.
-        </p>
-        <p>
-          Our target audience is consumers who value quality, professionalism, and affordability. With years of
-          experience in the industry, we have built a reputation for delivering exceptional service and exceeding
-          customer expectations. When you choose Avio Tech Solutions, you can rest assured that your home
-          entertainment setup is in good hands.
-        </p>
+      <div class="container welcome-inner">
+        <div class="welcome-image">
+          <img src="images/welcome-theater.jpg" alt="Home theater living room" />
+        </div>
+        <div class="welcome-content">
+          <h2>Welcome to Avio Tech Solutions</h2>
+          <p>
+            Avio Tech Solutions is your go-to destination in Venice, Florida for professional home theater
+            and computer installation services. Our goal is to enhance your entertainment experience by
+            providing top-notch services at affordable prices, with client satisfaction being our utmost priority.
+          </p>
+          <p>
+            At Avio Tech Solutions, we understand the importance of having a seamless and enjoyable home theater
+            setup. Whether you're a movie buff, a gaming enthusiast, or simply looking to create a relaxing
+            entertainment space in your home, our team of experts is here to help. We offer a range of services
+            including home theater system design, installation, setup, and troubleshooting to ensure that your
+            audio and visual needs are met to perfection.
+          </p>
+          <p>
+            Our target audience is consumers who value quality, professionalism, and affordability. With years of
+            experience in the industry, we have built a reputation for delivering exceptional service and exceeding
+            customer expectations. When you choose Avio Tech Solutions, you can rest assured that your home
+            entertainment setup is in good hands.
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- TESTIMONIAL SECTION (image + quote) -->
+    <!-- TESTIMONIAL -->
     <section class="section section-testimonial">
       <div class="container testimonial-inner">
         <div class="testimonial-image">
@@ -83,18 +88,15 @@
       </div>
     </section>
 
-    <!-- SERVICES SECTION (3 blocks) -->
+    <!-- SERVICES SECTION -->
     <section id="services" class="section section-services">
       <div class="container">
         <h2>Our Services</h2>
         <div class="service-grid">
+          
           <!-- Home Theater -->
           <article class="service-card">
-            <img
-              src="images/service-home-theater.jpg"
-              alt="Home Theater Installation"
-              class="service-image"
-            />
+            <img src="images/service-home-theater.jpg" class="service-image" alt="Home Theater Installation" />
             <div class="service-body">
               <h3>Home Theater Installation</h3>
               <p>
@@ -108,11 +110,7 @@
 
           <!-- Computer Installation -->
           <article class="service-card">
-            <img
-              src="images/service-computer.jpg"
-              alt="Computer Installation and Repair"
-              class="service-image"
-            />
+            <img src="images/service-computer.jpg" class="service-image" alt="Computer Installation" />
             <div class="service-body">
               <h3>Computer Installation</h3>
               <p>
@@ -126,11 +124,7 @@
 
           <!-- Smart Home -->
           <article class="service-card">
-            <img
-              src="images/service-smart-home.jpg"
-              alt="Smart Home Installation"
-              class="service-image"
-            />
+            <img src="images/service-smart-home.jpg" class="service-image" alt="Smart Home Installation" />
             <div class="service-body">
               <h3>Smart Home Installation</h3>
               <p>
@@ -141,21 +135,16 @@
               </p>
             </div>
           </article>
+
         </div>
       </div>
     </section>
 
-    <!-- BIG SERVICES CALLOUT (image with overlay text) -->
-    <section class="section section-callout">
-      <div class="callout-wrapper">
-        <div class="callout-bg"></div>
-        <div class="callout-overlay"></div>
-        <div class="callout-content">
-          <h2>Upgrade Your Living Space with Avio Tech Solutions</h2>
-          <p>Call for your Free Consultation</p>
-          <p class="callout-phone">941-218-0418</p>
-          <a href="#contact" class="btn btn-primary">Contact Us</a>
-        </div>
+    <!-- BLACK CONSULTATION BAR (ONLY ONE, AFTER SERVICES) -->
+    <section class="consult-bar">
+      <div class="consult-inner">
+        <p class="consult-text">Call for your Free Consultation</p>
+        <p class="consult-phone">941-218-0418</p>
       </div>
     </section>
 
@@ -170,27 +159,12 @@
 
         <div class="contact-form">
           <h3>Contact us</h3>
-          <!-- Static form, can be wired up later -->
           <form>
-            <label>
-              First name
-              <input type="text" name="firstName" required />
-            </label>
-            <label>
-              Last name
-              <input type="text" name="lastName" required />
-            </label>
-            <label>
-              Email*
-              <input type="email" name="email" required />
-            </label>
-            <label>
-              Message*
-              <textarea name="message" rows="4" required></textarea>
-            </label>
-            <button type="submit" class="btn btn-primary btn-full">
-              Submit (demo only)
-            </button>
+            <label>First name<input type="text" required /></label>
+            <label>Last name<input type="text" required /></label>
+            <label>Email*<input type="email" required /></label>
+            <label>Message*<textarea rows="4" required></textarea></label>
+            <button type="submit" class="btn btn-primary btn-full">Submit (demo)</button>
           </form>
         </div>
       </div>
@@ -202,12 +176,9 @@
     <div class="container footer-inner">
       <p>© 2024 Avio Tech Solutions LLC</p>
       <nav class="footer-nav">
-        <a href="#home">Home</a>
-        <span>•</span>
-        <a href="#services">Services</a>
-        <span>•</span>
-        <a href="#contact">Contact</a>
-        <span>•</span>
+        <a href="#home">Home</a><span>•</span>
+        <a href="#services">Services</a><span>•</span>
+        <a href="#contact">Contact</a><span>•</span>
         <a href="#about">About</a>
       </nav>
     </div>

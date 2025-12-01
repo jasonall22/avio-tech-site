@@ -46,7 +46,7 @@ a {
 }
 
 .logo img {
-  height: 60px; /* adjust if logo looks too big/small */
+  height: 60px;
 }
 
 .main-nav {
@@ -56,19 +56,14 @@ a {
 }
 
 .nav-link {
-  position: relative;
   padding: 0.35rem 0.8rem;
   border-radius: 999px;
   color: #111111;
 }
 
 .nav-link.active {
-  background: #8b0000; /* dark red like your current Home tab */
+  background: #8b0000;
   color: #ffffff;
-}
-
-.nav-link:not(.active):hover {
-  background: #f3f3f3;
 }
 
 /* Buttons */
@@ -79,20 +74,14 @@ a {
   justify-content: center;
   padding: 0.6rem 1.5rem;
   border-radius: 999px;
-  border: none;
   font-size: 0.95rem;
-  font-weight: 500;
   cursor: pointer;
-  text-decoration: none;
+  border: none;
 }
 
 .btn-primary {
-  background: #111111;
-  color: #ffffff;
-}
-
-.btn-primary:hover {
-  background: #000000;
+  background: #111;
+  color: #fff;
 }
 
 .btn-full {
@@ -108,21 +97,18 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
   text-align: center;
+  color: #fff;
 }
 
-/* Background image */
 .hero-bg {
   position: absolute;
   inset: 0;
   background-image: url("images/hero-main.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
 }
 
-/* Dark overlay to make text readable */
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -135,47 +121,54 @@ a {
 
 .hero-content {
   position: relative;
-  z-index: 1;
   max-width: 800px;
+  z-index: 1;
 }
 
 .hero h1 {
   font-size: clamp(2.3rem, 3vw, 3.1rem);
-  margin-bottom: 1rem;
   font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 .hero p {
   max-width: 520px;
   margin: 0 auto 1.6rem;
-  font-size: 1.05rem;
 }
 
-/* Sections */
+/* WELCOME SECTION */
 
 .section {
   padding: 3rem 0;
 }
 
-.section h2 {
-  font-size: 1.9rem;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-/* Welcome text */
-
 .section-welcome {
-  padding-top: 2.5rem;
+  padding-top: 3.5rem;
 }
 
-.section-welcome p {
-  margin: 0 0 1rem;
+.welcome-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 1.1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.welcome-image {
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.welcome-content h2 {
+  font-size: 2.1rem;
+  margin-bottom: 1rem;
+}
+
+.welcome-content p {
   line-height: 1.6;
-  color: #333333;
+  margin-bottom: 1rem;
 }
 
-/* Testimonial */
+/* TESTIMONIAL */
 
 .section-testimonial {
   background: #f7f7f7;
@@ -183,56 +176,29 @@ a {
 
 .testimonial-inner {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+  grid-template-columns: 1.1fr 1.1fr;
   gap: 2rem;
   align-items: center;
 }
 
-.testimonial-image img {
-  border-radius: 1.25rem;
-  object-fit: cover;
-  width: 100%;
-}
-
-.testimonial-content blockquote {
-  margin: 0 0 0.8rem;
-  font-style: italic;
-  color: #444444;
-}
-
-.testimonial-name {
-  margin: 0;
-  font-weight: 600;
-}
-
-.testimonial-role {
-  margin: 0.15rem 0 0;
-  color: #777777;
-}
-
-/* Services */
-
-.section-services {
-  background: #ffffff;
-}
+/* SERVICES */
 
 .section-services h2 {
+  text-align: center;
   margin-bottom: 1.5rem;
 }
 
 .service-grid {
   display: grid;
-  gap: 1.75rem;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.75rem;
 }
 
 .service-card {
-  border-radius: 1.25rem;
   border: 1px solid #e5e5e5;
+  border-radius: 1.25rem;
   overflow: hidden;
-  background: #ffffff;
-  display: flex;
-  flex-direction: column;
+  background: #fff;
 }
 
 .service-image {
@@ -241,73 +207,35 @@ a {
 }
 
 .service-body {
-  padding: 1.25rem 1.25rem 1.5rem;
+  padding: 1.25rem;
 }
 
 .service-body h3 {
   margin: 0 0 0.5rem;
 }
 
-.service-body p {
-  margin: 0;
-  color: #444444;
-  line-height: 1.6;
-}
+/* BLACK CONSULTATION BAR */
 
-/* Callout section (big image with overlay text) */
-
-.section-callout {
-  padding: 0;
-}
-
-.callout-wrapper {
-  position: relative;
-  height: 420px;
-  overflow: hidden;
-}
-
-.callout-bg {
-  position: absolute;
-  inset: 0;
-  background-image: url("images/hero-main.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-.callout-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-}
-
-.callout-content {
-  position: relative;
-  z-index: 1;
-  height: 100%;
-  color: #ffffff;
+.consult-bar {
+  background: #000;
+  padding: 2.5rem 1rem;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0 1rem;
+  color: #fff;
 }
 
-.callout-content h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+.consult-text {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 500;
 }
 
-.callout-content p {
-  margin: 0.15rem 0;
-}
-
-.callout-phone {
+.consult-phone {
+  margin: 0.3rem 0 0;
+  font-size: 1.8rem;
   font-weight: 600;
-  margin-bottom: 1rem;
 }
 
-/* Contact section */
+/* CONTACT */
 
 .section-contact {
   background: #f7f7f7;
@@ -315,95 +243,34 @@ a {
 
 .contact-inner {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  grid-template-columns: 0.9fr 1.1fr;
   gap: 2rem;
-  align-items: flex-start;
 }
-
-.contact-info h2 {
-  text-align: left;
-  margin-bottom: 0.8rem;
-}
-
-.contact-info p {
-  margin: 0 0 0.4rem;
-  color: #333333;
-}
-
-/* Contact form */
 
 .contact-form {
-  background: #ffffff;
-  border-radius: 1.25rem;
-  border: 1px solid #e5e5e5;
+  background: #fff;
   padding: 1.5rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 1.25rem;
 }
 
-.contact-form h3 {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-.contact-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-
-.contact-form label {
-  font-size: 0.9rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-  border-radius: 0.75rem;
-  border: 1px solid #cccccc;
-  padding: 0.45rem 0.6rem;
-  font: inherit;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: 2px solid #111111;
-  outline-offset: 1px;
-}
-
-/* Footer */
+/* FOOTER */
 
 .site-footer {
   border-top: 1px solid #e5e5e5;
-  background: #ffffff;
-}
-
-.footer-inner {
-  padding: 1rem 0;
   text-align: center;
-  font-size: 0.9rem;
-  color: #777777;
+  padding: 1rem 0;
+  color: #777;
 }
 
-.footer-nav {
-  margin-top: 0.25rem;
-}
-
-.footer-nav a {
-  margin: 0 0.25rem;
-}
-
-/* Responsive tweaks */
+/* RESPONSIVE */
 
 @media (max-width: 900px) {
   .main-nav {
-    display: none; /* keep it simple; could add mobile menu later */
+    display: none;
   }
 
-  .nav-inner {
-    justify-content: center;
-  }
-
+  .welcome-inner,
   .testimonial-inner,
   .contact-inner {
     grid-template-columns: 1fr;
@@ -411,6 +278,5 @@ a {
 
   .hero {
     height: 60vh;
-    min-height: 380px;
   }
 }
