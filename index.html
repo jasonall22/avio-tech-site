@@ -16,7 +16,7 @@
   <header class="top-bar">
     <div class="container nav-inner">
       <div class="logo">
-        <img src="images/logo.png" alt="Avio Tech Solutions logo" />
+        <img src="images/logo-avio.png" alt="Avio Tech Solutions logo" />
       </div>
 
       <input type="checkbox" id="nav-toggle" class="nav-toggle" />
@@ -44,8 +44,8 @@
       </div>
     </section>
 
-    <!-- WELCOME -->
-    <section id="about" class="section section-welcome">
+    <!-- WELCOME SECTION -->
+    <section id="about" class="section-welcome">
       <div class="container welcome-inner">
         <div class="welcome-image">
           <img src="images/welcome-theater.jpg" alt="Home theater living room" />
@@ -55,31 +55,41 @@
           <h2>Welcome to Avio Tech Solutions</h2>
           <p>
             Avio Tech Solutions is your go-to destination in Venice, Florida for professional home theater
-            and computer installation services...
+            and computer installation services. Our goal is to enhance your entertainment experience by
+            providing top-notch services at affordable prices, with client satisfaction being our utmost priority.
           </p>
           <p>
-            At Avio Tech Solutions, we understand the importance of having a seamless and enjoyable home
-            theater setup...
+            At Avio Tech Solutions, we understand the importance of having a seamless and enjoyable home theater
+            setup. Whether you're a movie buff, a gaming enthusiast, or simply looking to create a relaxing
+            entertainment space in your home, our team of experts is here to help. We offer a range of services
+            including home theater system design, installation, setup, and troubleshooting to ensure that your
+            audio and visual needs are met to perfection.
           </p>
           <p>
-            Our target audience is consumers who value quality, professionalism, and affordability...
+            Our target audience is consumers who value quality, professionalism, and affordability. With years of
+            experience in the industry, we have built a reputation for delivering exceptional service and exceeding
+            customer expectations. When you choose Avio Tech Solutions, you can rest assured that your home
+            entertainment setup is in good hands.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- SERVICES -->
-    <section id="services" class="section section-services">
+    <!-- SERVICES SECTION -->
+    <section id="services" class="section-services">
       <div class="container">
         <h2>Our Services</h2>
 
         <div class="service-grid">
-
           <article class="service-card">
             <img src="images/service-home-theater.jpg" class="service-image" alt="Home Theater Installation" />
             <div class="service-body">
               <h3>Home Theater Installation</h3>
-              <p>Transform your home entertainment experience...</p>
+              <p>
+                Transform your home entertainment experience with our professional Home Theater installation service.
+                Our team of expert technicians will create a custom installation to fit your unique space and needs.
+                With top-of-the-line equipment, your movies, shows, and games have never looked or sounded better.
+              </p>
             </div>
           </article>
 
@@ -87,7 +97,11 @@
             <img src="images/service-computer.jpg" class="service-image" alt="Computer Installation" />
             <div class="service-body">
               <h3>Computer Installation</h3>
-              <p>When it comes to computer installation and repair...</p>
+              <p>
+                When it comes to computer installation and repair, our team of expert technicians is here to provide
+                the fastest, most reliable, and affordable service possible. We know downtime can be a major setback,
+                so we work quickly and efficiently to get your systems back up and running.
+              </p>
             </div>
           </article>
 
@@ -95,10 +109,13 @@
             <img src="images/service-smart-home.jpg" class="service-image" alt="Smart Home Installation" />
             <div class="service-body">
               <h3>Smart Home Installation</h3>
-              <p>Our Smart Home installation service brings you the latest tech...</p>
+              <p>
+                Our Smart Home installation service is designed to bring you the latest in smart home technology in an
+                easy and intuitive way. We integrate your devices with a hassle-free process and provide technology
+                that fits your lifestyle, so you can elevate your living experience.
+              </p>
             </div>
           </article>
-
         </div>
       </div>
     </section>
@@ -114,25 +131,27 @@
     <!-- CONTACT SECTION -->
     <section id="contact" class="section-contact">
       <div class="container contact-flex">
-
-        <!-- LEFT SIDE -->
+        <!-- LEFT -->
         <div class="contact-left">
           <h2>Contact Us</h2>
           <p class="contact-email">E-Mail: info@aviotechsolutions.com</p>
           <p class="contact-phone">Phone: 941-218-0418</p>
 
           <div class="contact-icons">
-            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
-            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="#" aria-label="Instagram">
+              <img src="images/instagram.png" alt="Instagram" />
+            </a>
+            <a href="#" aria-label="Facebook">
+              <img src="images/facebook.png" alt="Facebook" />
+            </a>
           </div>
         </div>
 
-        <!-- RIGHT SIDE (FORM) -->
+        <!-- RIGHT -->
         <div class="contact-right">
           <h3>Contact us</h3>
 
           <form id="contact-form">
-
             <label>First name
               <input type="text" name="first_name" required />
             </label>
@@ -146,42 +165,37 @@
             </label>
 
             <label>Message *
-              <textarea rows="4" name="message" required></textarea>
+              <textarea name="message" rows="4" required></textarea>
             </label>
 
             <button type="submit" class="btn-submit">Submit</button>
-
             <p id="form-status" class="form-status"></p>
-
           </form>
         </div>
       </div>
     </section>
-
   </main>
 
   <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© 2024 Avio Tech Solutions LLC</p>
- 
-    </div>
-  </footer>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2024 Avio Tech Solutions LLC</p>
+  </div>
+</footer>
 
-  <!-- AJAX FORM SCRIPT (INSERTED HERE — CORRECT PLACE) -->
+  <!-- CONTACT FORM SCRIPT -->
   <script>
     const form = document.getElementById("contact-form");
     const status = document.getElementById("form-status");
 
     form.addEventListener("submit", async function (event) {
       event.preventDefault();
-
       const data = new FormData(form);
 
       const response = await fetch("https://formspree.io/f/xdkqzend", {
         method: "POST",
         body: data,
-        headers: { "Accept": "application/json" }
+        headers: { Accept: "application/json" }
       });
 
       if (response.ok) {
@@ -194,6 +208,5 @@
       }
     });
   </script>
-
 </body>
 </html>
