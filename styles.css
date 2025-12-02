@@ -52,18 +52,16 @@ img {
   text-decoration: none;
   color: #000;
   font-weight: 500;
-  padding: 0.35rem 1.1rem;   /* space for pill shape */
-  border-radius: 999px;      /* full pill */
+  padding: 0.35rem 1.1rem;
+  border-radius: 999px;
   transition: background 0.2s ease, color 0.2s ease;
 }
 
-/* active page (like your screenshot) */
 .nav-link.active {
-  background: #8b0000;       /* deep red pill */
+  background: #8b0000;
   color: #fff;
 }
 
-/* subtle hover on others */
 .nav-link:hover {
   background: rgba(139, 0, 0, 0.08);
 }
@@ -115,6 +113,9 @@ img {
 .hero-content {
   position: relative;
   z-index: 1;
+  display: flex;              /* NEW: arrange hero items vertically */
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero h1 {
@@ -129,9 +130,9 @@ img {
   line-height: 1.5;
 }
 
-/* Move hero button down */
+/* Move hero button down a lot */
 .hero-btn {
-  margin-top: 130px;
+  margin-top: 120px !important;   /* big gap between text & button */
 }
 
 .btn-primary {
@@ -157,7 +158,7 @@ img {
 .welcome-inner {
   display: flex;
   gap: 2rem;
-  align-items: stretch; /* same-height columns */
+  align-items: stretch;
 }
 
 .welcome-image,
@@ -176,7 +177,7 @@ img {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertically center text */
+  justify-content: center;
 }
 
 .welcome-content h2 {
@@ -236,6 +237,212 @@ img {
 .service-body p {
   margin: 0;
   line-height: 1.5;
+}
+
+/* REVIEWS */
+.section-reviews {
+  padding: 4rem 0;
+  background: #fafafa;
+}
+
+.reviews-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.reviews-header {
+  text-align: center;
+}
+
+.reviews-header h2 {
+  font-size: 2rem;
+  margin: 0 0 0.75rem;
+}
+
+.reviews-header p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* summary row (rating card + tag card) */
+.reviews-summary-row {
+  display: flex;
+  gap: 1.75rem;
+  align-items: stretch;
+}
+
+.rating-summary-card,
+.rating-tags-card {
+  flex: 1;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+  padding: 1.6rem 1.8rem;
+}
+
+/* rating summary card */
+.rating-label {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0f9d58;
+}
+
+.rating-score-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-top: 0.35rem;
+}
+
+.rating-score {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.rating-stars {
+  font-size: 1.2rem;
+  color: #ff9900;
+}
+
+.rating-count {
+  margin: 0.4rem 0 0.6rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.rating-bar {
+  height: 7px;
+  border-radius: 999px;
+  background: #eee;
+  overflow: hidden;
+  margin-bottom: 0.7rem;
+}
+
+.rating-bar-fill {
+  width: 100%;
+  height: 100%;
+  background: #0f9d58;
+}
+
+.rating-note {
+  margin: 0 0 0.9rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* trust badges */
+.trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.trust-badge {
+  font-size: 0.85rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: #f3f4f6;
+  color: #333;
+}
+
+/* keyword tags card */
+.rating-tags-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.05rem;
+}
+
+.rating-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-pill {
+  font-size: 0.85rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid #e5e5ea;
+  color: #333;
+}
+
+/* manual testimonial cards + widget grid */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.75rem;
+}
+
+.review-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem 1.6rem;
+}
+
+.review-text {
+  margin: 0 0 0.9rem;
+  line-height: 1.6;
+}
+
+.review-name {
+  margin: 0;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Thumbtack widget styled as a matching card */
+.thumbtack-widget {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+  padding: 1.6rem 1.8rem;
+  width: 100%;
+  height: 100%;
+}
+
+.thumbtack-widget .widget {
+  width: 100% !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Fix Thumbtack stars showing vertically */
+.thumbtack-widget .tt-stars {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 4px !important;
+}
+
+.thumbtack-widget .tt-stars img {
+  width: 18px !important;
+  height: 18px !important;
+  display: inline-block !important;
+}
+
+.thumbtack-widget .tt-stars span {
+  margin-left: 6px !important;
+  font-size: 0.85rem !important;
+  color: #555 !important;
+}
+
+.thumbtack-widget p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.thumbtack-widget a {
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 /* CONSULT BAR */
@@ -399,5 +606,9 @@ img {
 
   .hero {
     height: 70vh;
+  }
+
+  .reviews-summary-row {
+    flex-direction: column;
   }
 }
