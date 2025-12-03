@@ -612,3 +612,25 @@ img {
     flex-direction: column;
   }
 }
+/* Footer NAP block */
+.footer-nap {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin: 0;
+  color: #000;
+}
+
+.footer-phone {
+  color: #000;
+  text-decoration: none;
+}
+
+.footer-phone:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #333;
+}
