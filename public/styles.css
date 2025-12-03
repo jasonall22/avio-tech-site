@@ -113,7 +113,7 @@ img {
 .hero-content {
   position: relative;
   z-index: 1;
-  display: flex;              /* NEW: arrange hero items vertically */
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -125,14 +125,15 @@ img {
 }
 
 .hero-subtext {
-  margin: 0 0 0.5rem;
+  margin: 0;
   font-size: 1rem;
   line-height: 1.5;
+  max-width: 900px;
 }
 
 /* Move hero button down a lot */
 .hero-btn {
-  margin-top: 120px !important;   /* big gap between text & button */
+  margin-top: 120px !important;
 }
 
 .btn-primary {
@@ -518,7 +519,7 @@ img {
   font-size: 1rem;
 }
 
-/* Updated black button */
+/* Contact form button: black with dark gray hover */
 .btn-submit {
   margin-top: 0.5rem;
   padding: 0.9rem;
@@ -578,6 +579,28 @@ img {
   border-top: 1px solid #eee;
 }
 
+.footer-nap {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin: 0;
+  color: #000;
+}
+
+.footer-phone {
+  color: #000;
+  text-decoration: none;
+}
+
+.footer-phone:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #333;
+}
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .nav-toggle-label {
@@ -611,26 +634,4 @@ img {
   .reviews-summary-row {
     flex-direction: column;
   }
-}
-/* Footer NAP block */
-.footer-nap {
-  line-height: 1.6;
-  font-size: 0.95rem;
-  margin: 0;
-  color: #000;
-}
-
-.footer-phone {
-  color: #000;
-  text-decoration: none;
-}
-
-.footer-phone:hover {
-  text-decoration: underline;
-}
-
-.footer-copy {
-  margin-top: 1rem;
-  font-size: 0.85rem;
-  color: #333;
 }
