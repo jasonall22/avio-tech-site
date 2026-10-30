@@ -652,6 +652,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 @media (max-width: 900px) {
   .nav-inner { flex-wrap: wrap; }
   .main-nav { width: 100%; }
+  .policy-nav { display: flex; flex-direction: row; flex-wrap: wrap; gap: .25rem; justify-content: center; }
   .nav-toggle { display: block; position: absolute; width: 1px; height: 1px; opacity: 0; }
   .nav-toggle:focus-visible + .nav-toggle-label { outline: 3px solid #1a73e8; outline-offset: 5px; }
 }
