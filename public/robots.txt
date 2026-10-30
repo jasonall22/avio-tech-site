@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.aviotechsolutions.net/sitemap.xml
+Sitemap: https://aviotechsolutions.net/sitemap.xml
+

@@ -636,3 +636,33 @@ img {
   }
 }
 
+
+
+/* Accessibility and narrow screens */
+html { scroll-padding-top: 6rem; }
+.skip-link { position: absolute; top: -100px; left: 1rem; z-index: 100; padding: 1rem; background: #fff; color: #000; }
+.skip-link:focus { top: 1rem; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid #1a73e8; outline-offset: 3px; }
+.consult-phone a, .contact-left a { color: inherit; }
+.honeypot { display: none; }
+.form-status[data-state="success"] { color: #14532d; }
+.form-status[data-state="error"] { color: #8b0000; }
+.btn-submit:disabled { opacity: .65; cursor: wait; }
+.welcome-image, .welcome-content, .contact-left, .contact-right { min-width: 0; }
+@media (max-width: 900px) {
+  .nav-inner { flex-wrap: wrap; }
+  .main-nav { width: 100%; }
+  .nav-toggle { display: block; position: absolute; width: 1px; height: 1px; opacity: 0; }
+  .nav-toggle:focus-visible + .nav-toggle-label { outline: 3px solid #1a73e8; outline-offset: 5px; }
+}
+@media (max-width: 480px) {
+  .service-grid, .reviews-grid { grid-template-columns: minmax(0, 1fr); }
+  .contact-right { padding: 1.5rem; }
+  .contact-left { padding: 2rem 1rem; }
+  .contact-left a { overflow-wrap: anywhere; }
+  .hero { height: auto; min-height: 70vh; padding: 2rem 0; }
+  .hero h1 { font-size: 2rem; }
+  .hero-btn { margin-top: 2rem !important; }
+  .rating-summary-card, .rating-tags-card, .thumbtack-widget { padding: 1.25rem; }
+  .thumbtack-widget .tt-stars { flex-wrap: wrap; }
+}
